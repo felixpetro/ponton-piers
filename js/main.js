@@ -1,7 +1,21 @@
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.main-nav');
+async function loadSharedHeader() {
+  const mount = document.querySelector('#site-header');
+  if (!mount) return;
+  try {
+    const response = await fetch('header.html');
+    if (!response.ok) throw new Error('Не удалось загрузить шапку');
+    mount.innerHTML = await response.text();
+    initHeaderMenu();
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-if (menuButton && navigation) {
+function initHeaderMenu() {
+  const menuButton = document.querySelector('.menu-toggle');
+  const navigation = document.querySelector('.main-nav');
+  if (!menuButton || !navigation) return;
+
   menuButton.addEventListener('click', () => {
     const isOpen = navigation.classList.toggle('is-open');
     menuButton.setAttribute('aria-expanded', String(isOpen));
@@ -16,6 +30,8 @@ if (menuButton && navigation) {
     });
   });
 }
+
+loadSharedHeader();
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
