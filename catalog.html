@@ -10,11 +10,7 @@
 </style>
 </head>
 <body>
-<header class="header"><div class="container nav">
-<a class="brand" href="index.html"><img src="images/logo.svg" alt="Понтон Пирс"><span>Понтон Пирс</span></a>
-<button class="menu-toggle" aria-label="Открыть меню">☰</button>
-<nav class="menu"><a href="index.html#catalog">Главная</a><a href="catalog.html">Каталог</a><a href="index.html#advantages">Преимущества</a><a href="index.html#process">Как работаем</a><a href="index.html#contacts">Контакты</a><a class="nav-cta" href="index.html#contacts">Получить расчёт</a></nav>
-</div></header>
+<div id="site-header"></div>
 <main>
 <section class="catalog-hero"><div class="container"><p class="eyebrow">ПОНТОН ПИРС</p><h1>Каталог продукции</h1><p>Плавучие конструкции для частных, коммерческих и специальных объектов. Выберите решение или отправьте нам задачу для индивидуального расчёта.</p><div class="catalog-nav"><a href="index.html">← Вернуться на главную</a></div></div></section>
 <section class="catalog-page"><div class="container"><div class="catalog-grid">
@@ -27,9 +23,5 @@
 </div><div class="catalog-note"><strong>Нужна нестандартная конструкция?</strong><br>Пришлите размеры, назначение и место установки — подготовим индивидуальное решение.</div></div></section>
 </main>
 <footer><div class="container footer-inner"><span>© <span id="year"></span> Понтон Пирс</span><span>Плавучие конструкции</span></div></footer>
-<script>
-document.querySelector('.menu-toggle')?.addEventListener('click',()=>document.querySelector('.menu').classList.toggle('open'));
-document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
+<script src="js/main.js" defer></script>
 </body></html>
