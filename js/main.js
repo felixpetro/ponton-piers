@@ -11,6 +11,18 @@ async function loadSharedHeader() {
   }
 }
 
+async function loadSharedFooter() {
+  const mount = document.querySelector('#site-footer');
+  if (!mount) return;
+  try {
+    const response = await fetch('footer.html');
+    if (!response.ok) throw new Error('Не удалось загрузить подвал');
+    mount.innerHTML = await response.text();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 function initHeaderMenu() {
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.main-nav');
@@ -32,6 +44,7 @@ function initHeaderMenu() {
 }
 
 loadSharedHeader();
+loadSharedFooter();
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
