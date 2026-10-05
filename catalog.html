@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Каталог — Понтон Пирс</title>
+<meta name="description" content="Каталог понтонов, причалов, плавучих платформ и специальных конструкций Понтон Пирс.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.catalog-hero{background:linear-gradient(120deg,#062b46,#087fa9);color:#fff;padding:90px 0}.catalog-hero h1{font-size:clamp(42px,6vw,70px);margin:0 0 18px}.catalog-hero p{max-width:650px;color:#dcebf2;font-size:19px;line-height:1.6}.catalog-page{padding:85px 0}.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product{border:1px solid #dce7ed;border-radius:14px;overflow:hidden;background:#fff;transition:.2s}.product:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(8,50,70,.12)}.product-visual{height:190px;background:linear-gradient(145deg,#e9f6fa,#c5e7ef);display:grid;place-items:center;color:#087fa9;font-size:56px;font-weight:900}.product-body{padding:28px}.product h2{margin:0 0 10px;font-size:24px}.product p{color:#607789;line-height:1.6}.product a{display:inline-block;margin-top:12px;color:#087fa9;font-weight:700}.catalog-note{margin-top:45px;padding:26px;border-radius:12px;background:#f4f8fa;color:#607789}.catalog-nav{margin-top:25px}.catalog-nav a{color:#fff;text-decoration:underline}@media(max-width:800px){.catalog-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.catalog-grid{grid-template-columns:1fr}.catalog-hero{padding:65px 0}}
+</style>
+</head>
+<body>
+<header class="header"><div class="container nav">
+<a class="brand" href="index.html"><img src="images/logo.svg" alt="Понтон Пирс"><span>Понтон Пирс</span></a>
+<button class="menu-toggle" aria-label="Открыть меню">☰</button>
+<nav class="menu"><a href="index.html#catalog">Главная</a><a href="catalog.html">Каталог</a><a href="index.html#advantages">Преимущества</a><a href="index.html#process">Как работаем</a><a href="index.html#contacts">Контакты</a><a class="nav-cta" href="index.html#contacts">Получить расчёт</a></nav>
+</div></header>
+<main>
+<section class="catalog-hero"><div class="container"><p class="eyebrow">ПОНТОН ПИРС</p><h1>Каталог продукции</h1><p>Плавучие конструкции для частных, коммерческих и специальных объектов. Выберите решение или отправьте нам задачу для индивидуального расчёта.</p><div class="catalog-nav"><a href="index.html">← Вернуться на главную</a></div></div></section>
+<section class="catalog-page"><div class="container"><div class="catalog-grid">
+<article class="product"><div class="product-visual">01</div><div class="product-body"><h2>Понтоны</h2><p>Модульные плавучие основания для причалов, платформ и технических задач.</p><a href="index.html#contacts">Запросить расчёт →</a></div></article>
+<article class="product"><div class="product-visual">02</div><div class="product-body"><h2>Причалы</h2><p>Плавучие причалы для лодок, катеров и удобного доступа к воде.</p><a href="index.html#contacts">Запросить расчёт →</a></div></article>
+<article class="product"><div class="product-visual">03</div><div class="product-body"><h2>Плавучие платформы</h2><p>Площадки для отдыха, мероприятий, оборудования и коммерческих задач.</p><a href="index.html#contacts">Запросить расчёт →</a></div></article>
+<article class="product"><div class="product-visual">04</div><div class="product-body"><h2>Плавучие дома</h2><p>Плавучие объекты с возможностью проектирования конфигурации под задачу.</p><a href="index.html#contacts">Обсудить проект →</a></div></article>
+<article class="product"><div class="product-visual">05</div><div class="product-body"><h2>Плавучие бани</h2><p>Комплексные решения для отдыха на воде с индивидуальной планировкой.</p><a href="index.html#contacts">Обсудить проект →</a></div></article>
+<article class="product"><div class="product-visual">06</div><div class="product-body"><h2>Спецконструкции</h2><p>Нестандартные плавучие сооружения по техническому заданию заказчика.</p><a href="index.html#contacts">Обсудить проект →</a></div></article>
+</div><div class="catalog-note"><strong>Нужна нестандартная конструкция?</strong><br>Пришлите размеры, назначение и место установки — подготовим индивидуальное решение.</div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Понтон Пирс</span><span>Плавучие конструкции</span></div></footer>
+<script>
+document.querySelector('.menu-toggle')?.addEventListener('click',()=>document.querySelector('.menu').classList.toggle('open'));
+document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body></html>
